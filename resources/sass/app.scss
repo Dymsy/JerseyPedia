@@ -1,0 +1,47 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import 'bootstrap/scss/bootstrap';
+
+// Custom
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: white;
+}
+.banner img{
+    width: 100%;
+    border-radius: 15px;
+}
+.pilih-liga img{
+    max-height: 100px;
+}
+.pilih-liga .card{
+    border-radius: 15px;
+}
+.products .card{
+    border-radius: 15px;
+}
+.breadcrumb{
+    background-color: transparent;
+    padding: 0;
+}
+.breadcrumb .active{
+    font-weight: bold;
+    color: black;
+}
+.breadcrumb a{
+    text-decoration: none;
+    color: black;
+}
+.btn-dark{
+    border-radius: 10px;
+}
+.pagination {
+    font-size: 0.95rem;
+}
+.pagination .page-link {
+    padding: 0.25rem 0.75rem;
+}
