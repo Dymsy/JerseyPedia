@@ -4,11 +4,11 @@ namespace App\Http\Livewire;
 
 use App\Models\Product;
 use Livewire\Component;
-// use Livewire\WithPagination;
+use Livewire\WithPagination;
 
 class ProductIndex extends Component
 {
-    // use WithPagination;
+    use WithPagination;
 
     public $search;
 

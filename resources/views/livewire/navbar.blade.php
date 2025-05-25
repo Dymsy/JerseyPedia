@@ -18,16 +18,26 @@
                     </a>
                     <div class="dropdown-menu" arial-labbelledby="navbarDropdown">
                     @foreach($ligas as $liga)
-                    <a class="dropdown-item" href="#">{{ $liga->nama }}</a>
+                        <a class="dropdown-item" href="{{ route('livewire.product-liga', ['ligaId' => $liga->id]) }}">{{ $liga->nama }}</a>
                     @endforeach
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="{{ route('livewire.product-index')}}">Semua Liga</a>
                     </div>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('livewire.history') }}">History</a>
+                </li>
             </ul>
             <!-- Right Side Of Navbar -->
             <ul class="navbar-nav ms-auto">
                 <!-- Authentication Links -->
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('livewire.keranjang') }}">Keranjang <i class="fas fa-shopping-bag"></i>
+                    @if($jumlah_pesanan !==0)
+                    <span class="badge bg-danger">{{ $jumlah_pesanan}}</span>
+                    @endif
+                    </a>
+                </li>
                 @guest
                     @if (Route::has('login'))
                         <li class="nav-item">

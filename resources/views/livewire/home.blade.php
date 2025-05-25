@@ -11,18 +11,23 @@
         <div class="row mt-4">
             @foreach($ligas as $liga)
             <div class="col">
-                <div class="card shadow">
-                    <div class="card-body text-center">
-                        <img src="{{ url('assets/liga')}}/{{ $liga->gambar }}" alt="" class="img-fluid">
+                <a href="{{ route('livewire.product-liga', $liga->id) }}">
+                    <div class="card shadow">
+                        <div class="card-body text-center">
+                            <img src="{{ url('assets/liga')}}/{{ $liga->gambar }}" alt="" class="img-fluid">
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             @endforeach
         </div>
     </div>
 
     <section class="products mt-5 mb-5">
-        <h3><strong>Best Product</strong></h3>
+        <h3>
+            <strong>Best Product</strong>
+            <a href="{{ route('livewire.product-index')}}" class="btn btn-dark float-end"><i class="fas fa-eye"></i> Lihat Semua</a>
+        </h3>
         <div class="row mt-4">
             @foreach($products as $product)
             <div class="col-md-3">
@@ -37,7 +42,7 @@
                         </div>
                         <div class="row mt-2">
                             <div class="col-md-12">
-                                <a href="#" class="btn btn-dark btn-block w-100">Detail</a>
+                                <a href="{{ route('livewire.product-detail', $product->id)}}" class="btn btn-dark btn-block w-100"><i class="fas fa-eye"></i> Detail</a>
                             </div>
                         </div>
                     </div>

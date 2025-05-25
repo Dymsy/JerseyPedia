@@ -6,7 +6,7 @@
             <div class="col">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="{{ route('livewire.home')}}">Home</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('livewire.home')}}">Beranda</a></li>
                         <li class="breadcrumb-item active" aria-current="page">List Jersey</li>
                     </ol>
                 </nav>
@@ -15,7 +15,7 @@
 
         <div class="row">
             <div class="col-md-9">
-                <h2>List <strong>Jersey</strong></h2>
+                <h2>{{ $title }}</h2>
             </div>
             <div class="col-md-3">
                 <div class="input-group flex-nowrap">
@@ -42,7 +42,7 @@
                             </div>
                             <div class="row mt-2">
                                 <div class="col-md-12">
-                                    <a href="#" class="btn btn-dark btn-block w-100">Detail</a>
+                                    <a href="{{ route('livewire.product-detail', $product->id)}}" class="btn btn-dark btn-block w-100"><i class="fas fa-eye"></i> Detail</a>
                                 </div>
                             </div>
                         </div>

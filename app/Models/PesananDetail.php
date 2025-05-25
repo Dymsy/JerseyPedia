@@ -10,6 +10,16 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class PesananDetail extends Model
 {
     use HasFactory;
+    
+    protected $fillable = [
+        'jumlah_pesanan',
+        'total_harga',
+        'namaset',
+        'nama',
+        'nomor',
+        'product_id',
+        'pesanan_id',
+    ];
 
     public function pesanan()
     {
